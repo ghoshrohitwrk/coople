@@ -1,0 +1,77 @@
+<div class="container">
+  <!-- Content here -->
+  <div class="row">
+    <div class="col">
+      <form (ngSubmit)="onFormSubmit()" [formGroup]="form" role="form">
+        <div class="form-group">
+          <label for="fullName">Name</label>
+          <input type="text" class="form-control" id="fullName" formControlName='fullName' #fullName>
+
+            <div class="alert alert-danger" role="alert" *ngIf="fullNameFieldError">
+              {{fullNameFieldError}}
+            </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Address</label>
+          <input type="text" class="form-control" id="address" formControlName='address' #address>
+
+          <div class="alert alert-danger" role="alert" *ngIf="addressFieldError">
+              {{addressFieldError}}
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="zipcode">Zipcode</label>
+          <input type="text" class="form-control" id="zipcode" formControlName='zipcode' #zipcode>
+
+            <div class="alert alert-danger" role="alert" *ngIf="zipCodeFieldError">
+              {{zipCodeFieldError}}
+            </div>
+
+        </div>
+        <div class="form-group">
+            <label for="country">Example multiple select</label>
+            
+            <select class="form-control" id="country" formControlName='country' #country>
+              <option>England</option>
+              <option>Wales</option>
+              <option>Scotland</option>
+              <option>Norther Island</option>
+              <option>Other</option>
+            </select>
+            
+            <div class="alert alert-danger" role="alert" *ngIf="countryFieldError">
+              {{countryFieldError}}
+            </div>
+
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div class="col">
+        <ul class="list-group">
+          <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th> Srno.</th>
+                <th>Full Name</th>
+                <th>Address</th>
+                <th>Zipcode</th>
+                <th>Country</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tr *ngFor="let address of addressList; let i = index" >
+              <td>{{i}}</td> 
+              <td>{{address.fullName}}</td> 
+              <td>{{address.address}}</td> 
+              <td>{{address.zipcode}}</td> 
+              <td>{{address.country}}</td>
+              <td><a href="#">Edit</a></td>
+            </tr>
+          </table>
+          </ul>
+    </div>
+  </div>
+</div>
