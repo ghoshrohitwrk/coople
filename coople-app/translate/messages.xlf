@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="5ad5d2a0cbeb420a251a5421d0ea4f4e89c40b4b" datatype="html">
+        <source>
+        <x id="START_TAG_DIV_1" ctype="x-div" equiv-text="&lt;div&gt;"/>
+          <x id="START_TAG_LABEL" ctype="x-label" equiv-text="&lt;label&gt;"/>Name<x id="CLOSE_TAG_LABEL" ctype="x-label" equiv-text="&lt;/label&gt;"/>
+          <x id="TAG_INPUT" ctype="x-input" equiv-text="&lt;input/&gt;"/>
+
+            <x id="START_TAG_DIV" ctype="x-div" equiv-text="&lt;div&gt;"/>
+              <x id="INTERPOLATION" equiv-text="{{fullNameFieldError}}"/>
+            <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="START_TAG_DIV_1" ctype="x-div" equiv-text="&lt;div&gt;"/>
+          <x id="START_TAG_LABEL_1" ctype="x-label" equiv-text="&lt;label&gt;"/>Address<x id="CLOSE_TAG_LABEL" ctype="x-label" equiv-text="&lt;/label&gt;"/>
+          <x id="TAG_INPUT_1" ctype="x-input" equiv-text="&lt;input/&gt;"/>
+
+          <x id="START_TAG_DIV_2" ctype="x-div" equiv-text="&lt;div&gt;"/>
+              <x id="INTERPOLATION_1" equiv-text="{{addressFieldError}}"/>
+          <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="START_TAG_DIV_1" ctype="x-div" equiv-text="&lt;div&gt;"/>
+          <x id="START_TAG_LABEL_2" ctype="x-label" equiv-text="&lt;label&gt;"/>Zipcode<x id="CLOSE_TAG_LABEL" ctype="x-label" equiv-text="&lt;/label&gt;"/>
+          <x id="TAG_INPUT_2" ctype="x-input" equiv-text="&lt;input/&gt;"/>
+
+            <x id="START_TAG_DIV_3" ctype="x-div" equiv-text="&lt;div&gt;"/>
+              <x id="INTERPOLATION_2" equiv-text="{{zipCodeFieldError}}"/>
+            <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+
+        <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="START_TAG_DIV_1" ctype="x-div" equiv-text="&lt;div&gt;"/>
+            <x id="START_TAG_LABEL_3" ctype="x-label" equiv-text="&lt;label&gt;"/>Example multiple select<x id="CLOSE_TAG_LABEL" ctype="x-label" equiv-text="&lt;/label&gt;"/>
+            
+            <x id="START_TAG_SELECT" ctype="x-select" equiv-text="&lt;select&gt;"/>
+              <x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option&gt;"/>England<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/>
+              <x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option&gt;"/>Wales<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/>
+              <x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option&gt;"/>Scotland<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/>
+              <x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option&gt;"/>Norther Island<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/>
+              <x id="START_TAG_OPTION" ctype="x-option" equiv-text="&lt;option&gt;"/>Other<x id="CLOSE_TAG_OPTION" ctype="x-option" equiv-text="&lt;/option&gt;"/>
+            <x id="CLOSE_TAG_SELECT" ctype="x-select" equiv-text="&lt;/select&gt;"/>
+            
+            <x id="START_TAG_DIV_4" ctype="x-div" equiv-text="&lt;div&gt;"/>
+              <x id="INTERPOLATION_3" equiv-text="{{countryFieldError}}"/>
+            <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+
+        <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+        <x id="START_TAG_DIV_1" ctype="x-div" equiv-text="&lt;div&gt;"/>
+          <x id="START_TAG_BUTTON" ctype="x-button" equiv-text="&lt;button&gt;"/>Submit<x id="CLOSE_TAG_BUTTON" ctype="x-button" equiv-text="&lt;/button&gt;"/>
+        <x id="CLOSE_TAG_DIV" ctype="x-div" equiv-text="&lt;/div&gt;"/>
+      </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4d818da1205de89bc3f1fa6acc81cf3d8e3b1310" datatype="html">
+        <source>
+            <x id="START_TABLE_HEADER" ctype="x-thead" equiv-text="&lt;thead&gt;"/>
+              <x id="START_TABLE_ROW" ctype="x-tr" equiv-text="&lt;tr&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/> Srno.<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Full Name<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Address<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Zipcode<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/>Country<x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+                <x id="START_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;th&gt;"/><x id="CLOSE_TABLE_HEADER_CELL" ctype="x-th" equiv-text="&lt;/th&gt;"/>
+              <x id="CLOSE_TABLE_ROW" ctype="x-tr" equiv-text="&lt;/tr&gt;"/>
+            <x id="CLOSE_TABLE_HEADER" ctype="x-thead" equiv-text="&lt;/thead&gt;"/>
+            <x id="START_TABLE_ROW_1" ctype="x-tr" equiv-text="&lt;tr&gt;"/>
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION" equiv-text="{{i}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/> 
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION_1" equiv-text="{{address.fullName}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/> 
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION_2" equiv-text="{{address.address}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/> 
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION_3" equiv-text="{{address.zipcode}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/> 
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="INTERPOLATION_4" equiv-text="{{address.country}}"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+              <x id="START_TABLE_CELL" ctype="x-td" equiv-text="&lt;td&gt;"/><x id="START_LINK" ctype="x-a" equiv-text="&lt;a&gt;"/>Edit<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/><x id="CLOSE_TABLE_CELL" ctype="x-td" equiv-text="&lt;/td&gt;"/>
+            <x id="CLOSE_TABLE_ROW" ctype="x-tr" equiv-text="&lt;/tr&gt;"/>
+          </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

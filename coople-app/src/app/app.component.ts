@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 
@@ -15,6 +15,10 @@ export class AppComponent implements OnInit {
   public addressFieldError: string;
   public zipCodeFieldError: string;
   public countryFieldError: string;
+  @ViewChild('fullName') fullNameInput: ElementRef;
+  @ViewChild('address') addressInput: ElementRef;
+  @ViewChild('zipcode') zipcodeInput: ElementRef;
+  @ViewChild('country') countryInput: ElementRef;
 
   constructor(private formBuilder: FormBuilder) {}
 
@@ -22,7 +26,7 @@ export class AppComponent implements OnInit {
     this.form = this.formBuilder.group({
       fullName: [null, [Validators.required]],
       address: [null, [Validators.required]],
-      zipcode: [null, [Validators.required, Validators.maxLength(5)]],
+      zipcode: [null, [Validators.required, Validators.maxLength(6)]],
       country: [null, [Validators.required]],
   });
 
@@ -34,7 +38,7 @@ export class AppComponent implements OnInit {
       const serializedForm = JSON.stringify(formObj);
       console.log(serializedForm);
       this.addressList.push(JSON.parse(serializedForm));
-      console.log(this.addressList);
+      this.form.reset();
     } else {
       this.generateErrorSummary();
     }
@@ -76,5 +80,20 @@ export class AppComponent implements OnInit {
     this.setaddressFieldError();
     this.setzipCodeFieldError();
     this.setcountryFieldError();
+  }
+
+  editAddress( event: any) {
+    event.preventDefault();
+    alert(event.target.id);
+    const index = event.target.id;
+    // this.addressList.push(JSON.parse(serializedForm));
+    this.addressList.forEach(function(addressList, index) {
+      console.log(index);
+      this.fullNameInput.value = this.addressList.fullName;
+      this.addressInput.value = this.addressList.address;
+      this.zipcodeInput.value = this.addressList.zipcode;
+      this.countryInput.value = this.addressList.country;
+
+    });
   }
 }
