@@ -15,14 +15,16 @@ export class AppComponent implements OnInit {
   public addressFieldError: string;
   public zipCodeFieldError: string;
   public countryFieldError: string;
-  @ViewChild('fullName') fullNameInput: ElementRef;
-  @ViewChild('address') addressInput: ElementRef;
-  @ViewChild('zipcode') zipcodeInput: ElementRef;
-  @ViewChild('country') countryInput: ElementRef;
+  @ViewChild('fullName',{ static: false }) fullNameInput: ElementRef;
+  @ViewChild('address', { static: false }) addressInput: ElementRef;
+  @ViewChild('zipcode', { static: false }) zipcodeInput: ElementRef;
+  @ViewChild('country', { static: false }) countryInput: ElementRef;
+  public index: number;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
+    console.log(this.index);
     this.form = this.formBuilder.group({
       fullName: [null, [Validators.required]],
       address: [null, [Validators.required]],
@@ -36,9 +38,21 @@ export class AppComponent implements OnInit {
     if (this.form.valid) {
       const formObj = this.form.getRawValue();
       const serializedForm = JSON.stringify(formObj);
-      console.log(serializedForm);
-      this.addressList.push(JSON.parse(serializedForm));
-      this.form.reset();
+      console.log(this.index);
+      if (this.index === undefined || this.index == null || this.index <= 0)
+      {
+        console.log(serializedForm);
+        this.addressList.push(JSON.parse(serializedForm));
+        console.log(this.addressList);
+        this.form.reset();
+      } else {
+        
+        this.addressList.splice(this.index,this.index);
+        this.addressList.push(JSON.parse(serializedForm));
+        this.index = null;
+        this.form.reset();
+      }
+
     } else {
       this.generateErrorSummary();
     }
@@ -75,6 +89,8 @@ export class AppComponent implements OnInit {
     }
   }
 
+  
+
   generateErrorSummary() {
     this.setfullNameFieldError();
     this.setaddressFieldError();
@@ -84,16 +100,19 @@ export class AppComponent implements OnInit {
 
   editAddress( event: any) {
     event.preventDefault();
-    alert(event.target.id);
-    const index = event.target.id;
-    // this.addressList.push(JSON.parse(serializedForm));
-    this.addressList.forEach(function(addressList, index) {
-      console.log(index);
-      this.fullNameInput.value = this.addressList.fullName;
-      this.addressInput.value = this.addressList.address;
-      this.zipcodeInput.value = this.addressList.zipcode;
-      this.countryInput.value = this.addressList.country;
+    this.index = event.target.id;
+    const dataList: any = this.addressList[this.index];
+    this.fullNameInput.nativeElement.value = dataList.fullName;
+    this.addressInput.nativeElement.value = dataList.address;
+    this.zipcodeInput.nativeElement.value = dataList.zipcode;
+    this.countryInput.nativeElement.value = dataList.country;
+    this.setFromToDirty();
+  }
 
+  setFromToDirty() {
+    Object.keys(this.form.controls).forEach(key => {
+      this.form.controls[key].markAsDirty();
+      this.form.controls[key].markAllAsTouched();
     });
   }
 }
